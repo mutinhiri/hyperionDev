@@ -1,4 +1,4 @@
-## Code Review Assessment for Option 1: Python Task 
+# Code Review Assessment for Option 1: Python Task 
 
 #
 
@@ -13,3 +13,24 @@ Great work in attempting the challeng. Great work in showing your idea in implem
 4. Return Type: Instead of returning a list of lists on *anagram.py line number 10*, we can return a list of tuples, where each tuple consists of a sorted string and a list of anagrams. This makes the output more explicit and easier to understand.
 
 5. I would suggest you make use of available method called ``` defaultdict ``` from the module ```collections.``` Instead of using a regular dictionary and checking if a key exists before adding a value we can simply add the word to the list of values associated with the key.
+
+6. The line result = {} on *anagram.py line number 3* is initializing an empty dictionary, which means that we need to check if a key exists in the dictionary before adding a value. As previously mentioned, using a defaultdict would be more efficient and avoid the need for this check.
+
+### The corrected solution can be something like this:
+
+```
+from collections import defaultdict
+
+class Solution:
+    def groupAnagrams(self, strs):
+        result_dict = defaultdict(list)
+        for i in strs:
+            x = "".join(sorted(i))
+            result_dict[x].append(i)
+        return list(result_dict.values())
+
+
+sol = Solution()
+print(sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+```
