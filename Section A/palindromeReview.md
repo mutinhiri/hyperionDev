@@ -6,7 +6,7 @@ Great work in attempting the challenge. Great work in showing your idea in imple
 
 1. Missing end for conditional if else: when trying to run the program, it throws an error ``` Unmatched keyword, missing `end' ? ``` With the normal execution flow the program will terminate because 
 
-2. Incorrect Comparison: The line while ```num != x``` on *palindrome.rb line number * is an infinite loop because the value of num never changes, which will cause the program to run indefinitely. The correct line should be while num > 0.
+2. Incorrect Comparison: The line while ```num != x``` on *palindrome.rb line number * is an infinite loop because the value of num never changes, which will cause the program to run indefinitely. The correct line should be ``` while num > 0```.
 
 3. The indentation of the code is inconsistent, which makes it hard to read I would advise to make your 
 
