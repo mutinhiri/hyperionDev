@@ -29,6 +29,8 @@ function sayNumber(num) {
   return result + ".";
 }
 
+console.log(sayNumber(23))
+
 assert.equal(sayNumber(0), "Zero.");
 assert.equal(sayNumber(1), "One.");
 assert.equal(sayNumber(12), "Twelve.");
