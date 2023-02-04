@@ -1,3 +1,2 @@
 # hyperionDev
-This is for assessment tests
-Add new file
+To install project dependencies, run ``` npm install ```
